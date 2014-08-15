@@ -22,6 +22,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         studentArray(studentInfo)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func studentArray(studentArray: NSArray) {
         for student in studentArray {
             var newPerson = Person(firstName: student["firstName"] as String, lastName: student["lastName"] as String)
@@ -61,30 +65,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         var studentForRow = self.students[indexPath.row]
-        println(indexPath.row)
-        println(studentForRow.fullName())
+        // println(indexPath.row)
+        // println(studentForRow.fullName())
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.identifier == "showDetail" {
-            println("Show Detail GO!")
+            // println("Show Detail GO!")
             var detailViewController = segue.destinationViewController as DetailViewController
             let section = tableView.indexPathForSelectedRow().section
             let row = tableView.indexPathForSelectedRow().row
             
             detailViewController.selectedPerson = students[row]
-        } else {
-            println("Successful Segue!")
         }
     }
 
 }
-
-// Advanced Challenge (not mandatory): Using Apple's documentation as a guide, load in the array of Person objects from a .plist file in your bundle
-// func pathForResource() -> String {
-// let path = NSBundle.mainBundle().pathForResource("StudentArray", ofType: "plist")    // Path of plist
-// let RosterArray = NSArray(contentsOfFile: path)                                      // Initializing array from plist
-
-// println(RosterArray)                                                                 // Print contents of array
-// return RosterArray
-// }

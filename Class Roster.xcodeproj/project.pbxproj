@@ -15,6 +15,7 @@
 		0A331554199A6DE70035F738 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331553199A6DE70035F738 /* Person.swift */; };
 		0A331556199A6E230035F738 /* StudentArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A331555199A6E230035F738 /* StudentArray.plist */; };
 		0A663AE3199C2D5500396A18 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A663AE2199C2D5500396A18 /* DetailViewController.swift */; };
+		D90AB327199DB298009B4A55 /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D90AB326199DB298009B4A55 /* default.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		0A331553199A6DE70035F738 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		0A331555199A6E230035F738 /* StudentArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StudentArray.plist; sourceTree = "<group>"; };
 		0A663AE2199C2D5500396A18 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D90AB326199DB298009B4A55 /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.jpg; path = Images.xcassets/default.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				0A331536199A6DAB0035F738 /* AppDelegate.swift */,
-				0A331538199A6DAB0035F738 /* ViewController.swift */,
 				0A663AE2199C2D5500396A18 /* DetailViewController.swift */,
 				0A331553199A6DE70035F738 /* Person.swift */,
+				0A331538199A6DAB0035F738 /* ViewController.swift */,
 				0A331555199A6E230035F738 /* StudentArray.plist */,
 				0A33153A199A6DAB0035F738 /* Main.storyboard */,
 				0A33153D199A6DAB0035F738 /* Images.xcassets */,
+				D90AB326199DB298009B4A55 /* default.jpg */,
 				0A331534199A6DAB0035F738 /* Supporting Files */,
 			);
 			path = "Class Roster";
@@ -201,6 +204,7 @@
 				0A33153C199A6DAB0035F738 /* Main.storyboard in Resources */,
 				0A331556199A6E230035F738 /* StudentArray.plist in Resources */,
 				0A33153E199A6DAB0035F738 /* Images.xcassets in Resources */,
+				D90AB327199DB298009B4A55 /* default.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

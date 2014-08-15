@@ -8,10 +8,12 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var fullNameLbl: UILabel!
     @IBOutlet weak var firstNameTxtField: UITextField!
     @IBOutlet weak var lastNameTxtField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     var selectedPerson : Person?
     
@@ -20,9 +22,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
-        firstNameTxtField.text = selectedPerson!.firstName
-        lastNameTxtField.text = selectedPerson!.lastName
+    override func viewWillAppear(animated: Bool) {
+        // super.viewWillAppear(true)
+        self.fullNameLbl.text = selectedPerson!.fullName()
+        self.firstNameTxtField.text = selectedPerson!.firstName
+        self.lastNameTxtField.text = selectedPerson!.lastName
+        
+        self.imageView.image = UIImage(named: "default.jpg")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.selectedPerson?.firstName = self.firstNameTxtField.text
+        self.selectedPerson?.lastName = self.lastNameTxtField.text
+        
     }
 
     override func didReceiveMemoryWarning() {
